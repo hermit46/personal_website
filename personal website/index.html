@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Portfolio Homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+
+        <div class= "nav-link-wrapper">
+          <a href="https://github.com/hermit46">Github</a>
+        </div>
+
+        <div class= "nav-link-wrapper">
+          <a href="https://www.linkedin.com/in/yong-quan-tan/">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          YONG QUAN TAN
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(pictures/calculator.png)"></div>
+
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="pictures/logos/calc.png" alt="">
+            </div>
+
+            <div class="subtitle">Creating a Reverse Polish Notation Calculator in Java.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(pictures/tree.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="pictures/logos/tree.png" alt="">
+            </div>
+
+            <div class="subtitle">Designing a Food Carbon Calculator with Better.SG</div>
+          </div>
+
+ <!--        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(pictures/podcast.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="pictures/logos/microphone.png" alt="">
+            </div>
+
+            <div class="subtitle">Producing tech leadership podcasts in Brave Dynamics</div>
+          </div> -->
+
+          <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
+</body>
+        </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+
+
+</html>
